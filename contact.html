@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Contact Me | Farrawaheda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="contact-page">
+
+<header>
+  <a href="index.html" class="logo">
+    🎀 Farrawaheda ♡
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="myinterest.html">Interests</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="contact-hero-text">
+      <p class="contact-eyebrow">♡ GET IN TOUCH ♡</p>
+
+      <h1>
+        Let's <span>Connect!</span>
+      </h1>
+
+      <h2>I'd love to hear from you ♡</h2>
+
+      <p>
+        Whether you have a question,
+        an opportunity, a collaboration
+        idea, or simply want to say hello,
+        I'm always happy to connect!
+      </p>
+
+      <a href="#message-form" class="contact-btn">
+        Drop Me a Message 💌
+      </a>
+    </div>
+
+    <div class="contact-hero-art">
+      <div class="contact-polaroid">
+        <img src="images/photo7.jpeg"
+             alt="My favourite photo">
+        <p>Nice people make a brighter world ♡</p>
+      </div>
+
+      <div class="contact-decoration">
+        🎀 🌷 💗
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="contact-content">
+
+    <!-- LEFT -->
+    <div class="contact-details">
+      <p class="contact-eyebrow">♡ CONTACT ME</p>
+
+      <h2>Get in <em>Touch</em> 💗</h2>
+
+      <p>
+        Feel free to reach out through
+        any of the following channels
+        or send me a message directly.
+      </p>
+
+      <!-- EMAIL -->
+      <div class="contact-method">
+        <span class="method-icon">✉️</span>
+
+        <div class="method-info">
+          <h3>Email</h3>
+          <p>Let's talk via email!</p>
+          <a href="mailto:strawberryfarr@gmail.com">
+            strawberryfarr@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <!-- INSTAGRAM -->
+      <div class="contact-method">
+        <span class="method-icon">📸</span>
+
+        <div class="method-info">
+          <h3>Instagram</h3>
+          <p>Let's be friends on Instagram! ♡</p>
+          <a href="https://www.instagram.com/stvlightfar/"
+             target="_blank"
+             rel="noopener">
+            @stvlightfar ♡ 💗
+          </a>
+        </div>
+      </div>
+
+      <!-- GITHUB -->
+      <div class="contact-method">
+        <span class="method-icon">💻</span>
+
+        <div class="method-info">
+          <h3>GitHub</h3>
+          <p>Explore my coding journey.</p>
+          <a href="https://github.com/"
+             target="_blank"
+             rel="noopener">
+            Visit GitHub ♡
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="contact-form-box" id="message-form">
+      <div class="form-decoration">🌸</div>
+
+      <h2>Send Me a <em>Message</em> ♡</h2>
+
+      <p>
+        I'd love to hear from you!
+        Fill in the form below
+        to prepare your email message.
+      </p>
+
+      <form id="contactForm">
+        <label for="contact-name">Your Name</label>
+        <input type="text"
+               id="contact-name"
+               placeholder="Enter your name"
+               required>
+
+        <label for="contact-email">Your Email</label>
+        <input type="email"
+               id="contact-email"
+               placeholder="yourname@email.com"
+               required>
+
+        <label for="contact-message">Your Message</label>
+        <textarea id="contact-message"
+                  rows="5"
+                  placeholder="Write your message here..."
+                  required></textarea>
+
+        <button type="submit" class="contact-btn send-btn">
+          Send Message 💌
+        </button>
+      </form>
+
+      <p class="form-note">
+        ♡ This will open your email application.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- GOODBYE SECTION -->
+  <section class="contact-goodbye">
+    <div class="goodbye-picture">
+      <img src="images/photo8.jpg"
+           alt="Beautiful pink flowers">
+    </div>
+
+    <div class="goodbye-text">
+      <p>♡ A LITTLE REMINDER ♡</p>
+
+      <h2>
+        Every beautiful connection
+        begins with a simple
+        <em>hello.</em>
+      </h2>
+
+      <p>🎀 Thank you for being here 🎀</p>
+
+      <a href="index.html" class="contact-btn">
+        Back to Home ♡
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    FARRAWAHEDA_24B10I003
+    &copy; Copyright 2026
+  </p>
+  <p>Made with 💗 and a little creativity</p>
+</footer>
+
+<script>
+document.getElementById("contactForm")
+  .addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name =
+      document.getElementById("contact-name").value;
+
+    const email =
+      document.getElementById("contact-email").value;
+
+    const message =
+      document.getElementById("contact-message").value;
+
+    const subject = encodeURIComponent(
+      "Message From Farrawaheda's Portfolio"
+    );
+
+    const body = encodeURIComponent(
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n\n" +
+      "Message:\n" + message
+    );
+
+    window.location.href =
+      "mailto:strawberryfarr@gmail.com" +
+      "?subject=" + subject +
+      "&body=" + body;
+  });
+</script>
+
+</body>
+</html>
